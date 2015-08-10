@@ -26,6 +26,12 @@ class IncidentsController < ApplicationController
   def create
     @incident = Incident.new(incident_params)
 
+    @incident.duration = @incident.duration * 60
+
+    if @incident.occurance.nil?
+      @incident.occurance = DateTime.now
+    end
+
     respond_to do |format|
       if @incident.save
         format.html { redirect_to @incident, notice: 'Incident was successfully created.' }

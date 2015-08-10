@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  root 'home#index'
+
   resources :incidents
-  resources :incidents
+
+  get 'home' => 'home#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Occurance</th>
       <th>Duration</th>
+      <th>Minutes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= incident.name %></td>
         <td><%= incident.occurance %></td>
         <td><%= incident.duration %></td>
+        <td><%= incident.minutes %></td>
         <td><%= link_to 'Show', incident %></td>
         <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
         <td><%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>

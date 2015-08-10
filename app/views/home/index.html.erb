@@ -1,0 +1,6 @@
+<div>
+	<%= form_tag("/incidents", method: "post") do %>
+		<%= number_field(:incident, :duration, :value => 30) %>
+		<%= submit_tag("Report") %>
+    <% end %>
+</div>
