@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Incidents</h1>
+<div><%= @incidents_full_duration / 60 %> minutes skwandred</div>
+<div><%= @incidents.length %> total incidents</div>
 
-<div><%= @incidents.length %> total incidents skwandr <%= @incidents_full_duration / 60 %> minutes.</div>
+<h1>History</h1>
 
 <table>
   <thead>
