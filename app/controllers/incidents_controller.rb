@@ -1,10 +1,16 @@
 class IncidentsController < ApplicationController
   before_action :set_incident, only: [:show, :edit, :update, :destroy]
+  before_filter :init
 
   # GET /incidents
   # GET /incidents.json
   def index
     @incidents = Incident.all
+
+    @incidents.each do |incident|
+      @incidents_full_duration += incident.duration
+    end
+
   end
 
   # GET /incidents/1
@@ -76,5 +82,9 @@ class IncidentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def incident_params
       params.require(:incident).permit(:name, :occurance, :duration)
+    end
+
+    def init
+      @incidents_full_duration = 0
     end
 end
