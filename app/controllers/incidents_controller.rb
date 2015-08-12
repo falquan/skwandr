@@ -7,7 +7,6 @@ class IncidentsController < ApplicationController
   def index
     @incidents = Incident.all
 
-    @incidents_full_duration = 0
     @incidents.each do |incident|
       @incidents_full_duration += incident.duration
     end
@@ -86,6 +85,6 @@ class IncidentsController < ApplicationController
     end
 
     def init
-      #@incidents_full_duration = 0
+      @incidents_full_duration = 0
     end
 end
