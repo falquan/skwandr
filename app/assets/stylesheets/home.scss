@@ -13,10 +13,12 @@
 
 	input {
 	}
+
 	input[type=submit] {
 		border: none;
 		background-color: orangered;
 	}
+
 	input[type=number] {
 		text-align: right;
 		width: 3em;
