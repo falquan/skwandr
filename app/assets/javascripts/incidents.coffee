@@ -3,7 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-	$('.quick-set').click ->
+	$('.quick-set').click (e) ->
+		e.preventDefault() 
 		me = $(this)
 		seconds = me.data('duration')
 		$('#incident_duration').val(seconds)
