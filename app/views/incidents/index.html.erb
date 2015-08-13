@@ -5,7 +5,31 @@
 
 <h1>History</h1>
 
-<table>
+<table class="history">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Occurance</th>
+      <th>Duration (minutes)</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incidents.each do |incident| %>
+      <tr>
+        <td><%= incident.name %></td>
+        <td><%= incident.occurance %></td>
+        <td><%= incident.duration / 60 %></td>
+        <td><%= link_to 'Show', incident %></td>
+        <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
+        <td><%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table style="display:none;">
   <thead>
     <tr>
       <th>Name</th>
