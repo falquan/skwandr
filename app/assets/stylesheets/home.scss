@@ -1,3 +1,19 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home-form {
+	font-size: 3em;
+	border: none;
+
+	input {
+	}
+	input[type=submit] {
+		border: none;
+		background-color: orangered;
+	}
+	input[type=number] {
+		text-align: right;
+		width: 3em;
+	}
+}

@@ -1,4 +1,4 @@
-<div>
+<div id="home-form">
 	<%= form_tag("/incidents", method: "post") do %>
 		<%= submit_tag("Skwandr") %>
 		<%= number_field(:incident, :duration, :value => 30) %>
