@@ -32,7 +32,7 @@ class IncidentsController < ApplicationController
   def create
     @incident = Incident.new(incident_params)
 
-    @incident.duration = @incident.duration * 60
+    @incident.duration = @incident.duration
 
     if @incident.occurance.nil?
       @incident.occurance = DateTime.now

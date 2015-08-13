@@ -2,9 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+onReady = (e) ->
 	$('.quick-set').click (e) ->
-		e.preventDefault() 
+		e.preventDefault()
+
 		me = $(this)
 		seconds = me.data('duration')
 		$('#incident_duration').val(seconds)
+
+$(document).ready onReady
+$(window).bind 'page:change', onReady
