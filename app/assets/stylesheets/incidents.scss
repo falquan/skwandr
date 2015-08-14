@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 table.history {
-	border-collapse: inherit;
-	border-spacing: 1em;
+  border-collapse: inherit;
+  border-spacing: 1em;
+}
+
+td.integer-cell {
+  text-align: right;
 }
