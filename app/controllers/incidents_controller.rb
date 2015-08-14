@@ -33,8 +33,9 @@ class IncidentsController < ApplicationController
     @incident = Incident.new(incident_params)
 
     if @incident.occurance.nil?
-      @incident.occurance = DateTime.now
+      # submitted from HOME
       @incident.duration = @incident.duration * 60
+      @incident.occurance = DateTime.now
     end
 
     respond_to do |format|

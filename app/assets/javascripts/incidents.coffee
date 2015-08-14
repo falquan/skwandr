@@ -10,5 +10,4 @@ onReady = (e) ->
 		seconds = me.data('duration')
 		$('#incident_duration').val(seconds)
 
-$(document).ready onReady
-$(window).bind 'page:change', onReady
+$(document).on 'ready page:change', onReady
