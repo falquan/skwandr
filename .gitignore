@@ -39,4 +39,4 @@ build/
 
 # Bower
 node_modules
-/vendor/assets/components/
+vendor/assets/components/
