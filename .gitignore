@@ -36,3 +36,7 @@ build/
 .rvmrc
 
 *.sqlite3
+
+# Bower
+node_modules
+/vendor/assets/components/

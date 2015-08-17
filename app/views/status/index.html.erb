@@ -7,5 +7,27 @@
   <aside>
     <h2>Changelog</h2>
     <div id="changelog"></div>
+    <script id="changelog-template" text="text/x-handlebars-template">
+      <ul>
+        {{#each checkin}}
+          <li>
+            <div>{{commit.author.date}}</div>
+            <div>{{commit.message}}</div>
+            <div>
+              <a href="{{html_url}}">
+                {{sha}}
+              </a>
+            </div>
+            <div>
+            {{#if author}}
+              <a href="{{author.html_url}}">{{author.login}}</a>
+            {{else}}
+              {{commit.author.email}}
+            {{/if}}
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </script>
   </aside>
 </div>
